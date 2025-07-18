@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="img/logo.jpg" type="image/jpeg" />
+  <title>FIEN Foundation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-[#1A1A1A]">
+  <!-- Responsive Navbar -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <!-- Logo -->
+      <a href="index.html">
+        <img src="img/logo.jpg" alt="FIEN Logo" class="h-8" />
+      </a>
+
+      <!-- Hamburger/X Button -->
+      <button
+        id="menu-toggle"
+        class="md:hidden text-gray-700 focus:outline-none transition-transform duration-200 ease-in-out"
+        onclick="toggleMenu()"
+      >
+        <!-- Hamburger Icon -->
+        <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+
+        <!-- X Icon (hidden by default) -->
+        <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex space-x-4 text-sm font-medium">
+        <a href="index.html" class="hover:text-blue-700">Home</a>
+        <a href="program.html" class="hover:text-blue-700">Our Programs</a>
+        <a href="team.html" class="hover:text-blue-700">Our Team</a>
+        <a href="interns.html" class="hover:text-blue-700">Intern Spotlight</a>
+        <a href="index.html#contact" class="hover:text-blue-700">Contact Us</a>
+        <a href="get-involved.html" class="hover:text-blue-700">Get Involved</a>
+      </nav>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 space-y-2 text-sm font-medium transition-all duration-300 ease-in-out">
+      <a href="index.html" class="block hover:text-blue-700">Home</a>
+      <a href="program.html" class="block hover:text-blue-700">Our Programs</a>
+      <a href="team.html" class="block hover:text-blue-700">Our Team</a>
+      <a href="interns.html" class="block hover:text-blue-700">Intern Spotlight</a>
+      <a href="index.html#contact" class="block hover:text-blue-700">Contact Us</a>
+      <a href="get-involved.html" class="block hover:text-blue-700">Get Involved</a>
+    </div>
+  </header>
+
+  <!-- Toggle Script -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const menuIcon = document.getElementById('menu-icon');
+      const closeIcon = document.getElementById('close-icon');
+
+      menu.classList.toggle('hidden');
+      menuIcon.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
+    }
+  </script>
+
+  <!-- Hero -->
+  <section class="relative bg-cover bg-center h-[85vh]" style="background-image: url('img/home_background.jpg')">
+    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+      <div class="text-center text-white px-6">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6">
+          Unlock Potential, Transform Lives
+        </h1>
+        <a href="program.html" class="bg-[#FFD600] text-black font-semibold px-6 py-3 rounded hover:bg-yellow-400">
+          Our Programs
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-20 bg-white px-6 md:px-12">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold mb-8 text-center">About FIEN Foundation</h2>
+      <!-- Insert about content here if needed -->
+    </div>
+  </section>
+
+  <!-- Programs Gallery -->
+  <section id="programs" class="py-20 bg-gray-50 px-6 md:px-12">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-12">Our Programs</h2>
+      <div class="grid gap-8 md:grid-cols-3">
+        <!-- Card 1 -->
+        <div class="bg-white shadow-lg rounded overflow-hidden border-t-4 border-[#00A859]">
+          <img src="img/FIENTeacherProgram.jpeg" alt="Teacher Exchange Program" class="w-full h-56 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2 text-[#00A859]">Teacher Exchange</h3>
+            <p class="text-sm text-gray-700">
+              Pairs Tanzanian teachers with global mentors for skills sharing and cultural pedagogy development.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white shadow-lg rounded overflow-hidden border-t-4 border-[#FFD600]">
+          <img src="img/IEPFIEN.jpeg" alt="Inlcusive Education Program" class="w-full h-56 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2 text-[#FFD600]">Inclusive Education</h3>
+            <p class="text-sm text-gray-700">
+              Improves access and accessibility in schools through infrastructure, teacher training, and inclusive design.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white shadow-lg rounded overflow-hidden border-t-4 border-[#1E88E5]">
+          <img src="img/FSPFIEN.jpeg" alt="FIEN Scholars Program" class="w-full h-56 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2 text-[#1E88E5]">FIEN Scholars</h3>
+            <p class="text-sm text-gray-700">
+              Mentors outstanding students applying to global universities through coaching and application prep.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="text-center mt-10">
+        <a href="program.html" class="inline-block px-6 py-3 bg-[#00A859] text-white font-semibold rounded hover:bg-green-700">
+          See More Programs
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Strategies -->
+  <section class="py-20 bg-gray-50 px-6 md:px-12">
+    <div class="max-w-6xl mx-auto">
+      <h3 class="text-2xl font-semibold mb-6 text-[#00A859]">Our Strategies</h3>
+      <ul class="list-disc list-inside space-y-2 text-gray-700 text-base">
+        <li><strong>Student First:</strong> We work directly with students to ensure our programs reflect real needs.</li>
+        <li><strong>Teacher Guided:</strong> We align with teachers to understand structural classroom challenges and how to support them.</li>
+        <li><strong>Community Led:</strong> FIEN collaborates with local organizations and leaders for sustainability.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="py-12 bg-white px-6 md:px-12">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto text-center">
+      <div class="bg-[#00A859] text-white p-6 rounded shadow">
+        <h3 class="text-3xl md:text-4xl font-bold">12+</h3>
+        <p class="mt-2 text-lg">Schools Partnered</p>
+      </div>
+      <div class="bg-[#FFD600] text-black p-6 rounded shadow">
+        <h3 class="text-3xl md:text-4xl font-bold">2K+</h3>
+        <p class="mt-2 text-lg">Students Reached</p>
+      </div>
+      <div class="bg-[#1E88E5] text-white p-6 rounded shadow">
+        <h3 class="text-3xl md:text-4xl font-bold">6</h3>
+        <p class="mt-2 text-lg">Regions Served</p>
+      </div>
+      <div class="bg-red-500 text-white p-6 rounded shadow">
+        <h3 class="text-3xl md:text-4xl font-bold">100%</h3>
+        <p class="mt-2 text-lg">Local-Led Projects</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 bg-gray-100 px-6 md:px-12">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4">Get in Touch</h2>
+      <p class="text-lg mb-6">Interested in supporting our mission or learning more? Reach out and we’ll connect with you.</p>
+      <form class="bg-white p-8 rounded shadow grid gap-6">
+        <input type="text" placeholder="Your Name" class="p-3 border rounded w-full" />
+        <input type="email" placeholder="Your Email" class="p-3 border rounded w-full" />
+        <textarea rows="4" placeholder="How can we help?" class="p-3 border rounded w-full"></textarea>
+        <button type="submit" class="bg-[#00A859] text-white px-6 py-3 rounded hover:bg-green-700">
+          Submit
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white py-6 text-center text-sm text-gray-500">
+    &copy; 2025 FIEN Foundation. All rights reserved.
+  </footer>
+</body>
+</html>

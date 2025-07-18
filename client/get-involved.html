@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="img/logo.jpg" type="image/jpeg" />
+  <title>Get Involved - FIEN Foundation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white text-[#1A1A1A]">
+  <!-- Responsive Navbar -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <!-- Logo -->
+      <a href="index.html">
+        <img src="img/logo.jpg" alt="FIEN Logo" class="h-8" />
+      </a>
+
+      <!-- Hamburger/X Button -->
+      <button
+        id="menu-toggle"
+        class="md:hidden text-gray-700 focus:outline-none transition-transform duration-200 ease-in-out"
+        onclick="toggleMenu()"
+      >
+        <!-- Hamburger Icon -->
+        <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+
+        <!-- X Icon (hidden by default) -->
+        <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex space-x-4 text-sm font-medium">
+        <a href="index.html" class="hover:text-blue-700">Home</a>
+        <a href="program.html" class="hover:text-blue-700">Our Programs</a>
+        <a href="team.html" class="hover:text-blue-700">Our Team</a>
+        <a href="interns.html" class="hover:text-blue-700">Intern Spotlight</a>
+        <a href="index.html#contact" class="hover:text-blue-700">Contact Us</a>
+        <a href="get-involved.html" class="hover:text-blue-700">Get Involved</a>
+      </nav>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 space-y-2 text-sm font-medium transition-all duration-300 ease-in-out">
+      <a href="index.html" class="block hover:text-blue-700">Home</a>
+      <a href="program.html" class="block hover:text-blue-700">Our Programs</a>
+      <a href="team.html" class="block hover:text-blue-700">Our Team</a>
+      <a href="interns.html" class="block hover:text-blue-700">Intern Spotlight</a>
+      <a href="index.html#contact" class="block hover:text-blue-700">Contact Us</a>
+      <a href="get-involved.html" class="block hover:text-blue-700">Get Involved</a>
+    </div>
+  </header>
+
+  <!-- Toggle Script -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const menuIcon = document.getElementById('menu-icon');
+      const closeIcon = document.getElementById('close-icon');
+
+      menu.classList.toggle('hidden');
+      menuIcon.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
+    }
+  </script>
+
+  <!-- Hero -->
+  <section class="bg-red-100 py-20 text-center">
+    <div class="max-w-4xl mx-auto px-6">
+      <h1 class="text-4xl font-bold mb-4 text-red-700">Join the Movement</h1>
+      <p class="text-lg text-gray-700">FIEN offers global opportunities for young professionals and educators to shape inclusive education across Tanzania.</p>
+    </div>
+  </section>
+
+  <!-- Strategy Description -->
+  <section class="max-w-4xl mx-auto px-6 py-12">
+    <h2 class="text-2xl font-bold text-red-700 mb-4">Why Intern With FIEN?</h2>
+    <p class="mb-4">
+      Our interns play a direct role in transforming education—from building websites and teaching digital literacy to managing grants and supporting student well-being. We believe that youth-led innovation drives real, lasting change.
+    </p>
+    <ul class="list-disc list-inside text-gray-700">
+      <li><strong>Make tangible impact:</strong> Create solutions in classrooms and communities.</li>
+      <li><strong>Work cross-culturally:</strong> Collaborate with local leaders and global peers.</li>
+      <li><strong>Grow professionally:</strong> Build real-world skills that matter—tech, teaching, research, and more.</li>
+    </ul>
+  </section>
+
+  <!-- Roles Grid -->
+  <main class="max-w-6xl mx-auto px-6 pb-16">
+    <div class="grid md:grid-cols-2 gap-12">
+      <!-- Web Dev -->
+      <div class="bg-[#FFE5E5] p-6 rounded shadow">
+        <h3 class="text-xl font-semibold text-red-700 mb-2">Web Development Technician</h3>
+        <ul class="list-disc list-inside text-gray-700 space-y-1">
+          <li>Build responsive websites for FIEN partner schools.</li>
+          <li>Collaborate on content, design, and updates.</li>
+          <li>Ensure accessibility, SEO, and strong UX.</li>
+        </ul>
+      </div>
+
+      <!-- Computer Tech -->
+      <div class="bg-[#FFE5E5] p-6 rounded shadow">
+        <h3 class="text-xl font-semibold text-red-700 mb-2">Computer Technician</h3>
+        <ul class="list-disc list-inside text-gray-700 space-y-1">
+          <li>Support hardware, software, and local networks.</li>
+          <li>Maintain security, backups, and system uptime.</li>
+          <li>Train school staff on IT maintenance.</li>
+        </ul>
+      </div>
+
+      <!-- Comm & Grants -->
+      <div class="bg-[#FFE5E5] p-6 rounded shadow">
+        <h3 class="text-xl font-semibold text-red-700 mb-2">Communications & Grant Manager</h3>
+        <ul class="list-disc list-inside text-gray-700 space-y-1">
+          <li>Write grant proposals and newsletters.</li>
+          <li>Lead social media and donor communication.</li>
+          <li>Craft compelling storytelling and visual assets.</li>
+        </ul>
+      </div>
+
+      <!-- ICS -->
+      <div class="bg-[#FFE5E5] p-6 rounded shadow">
+        <h3 class="text-xl font-semibold text-red-700 mb-2">ICS Teacher</h3>
+        <ul class="list-disc list-inside text-gray-700 space-y-1">
+          <li>Deliver tech classes using project-based learning.</li>
+          <li>Teach programming, digital tools, and safety.</li>
+          <li>Mentor students in coding and creative thinking.</li>
+        </ul>
+      </div>
+
+      <!-- English -->
+      <div class="bg-[#FFE5E5] p-6 rounded shadow">
+        <h3 class="text-xl font-semibold text-red-700 mb-2">English Language Teacher</h3>
+        <ul class="list-disc list-inside text-gray-700 space-y-1">
+          <li>Teach grammar, reading, writing, and speaking.</li>
+          <li>Use debates, games, and storytelling.</li>
+          <li>Improve student fluency and confidence.</li>
+        </ul>
+      </div>
+
+      <!-- Math -->
+      <div class="bg-[#FFE5E5] p-6 rounded shadow">
+        <h3 class="text-xl font-semibold text-red-700 mb-2">Mathematics Teacher</h3>
+        <ul class="list-disc list-inside text-gray-700 space-y-1">
+          <li>Design lessons that connect math to real life.</li>
+          <li>Incorporate digital tools and student projects.</li>
+          <li>Foster collaboration and conceptual thinking.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center pt-16">
+      <a href="index.html#contact" class="inline-block px-6 py-3 bg-red-600 text-white rounded font-semibold hover:bg-red-700">
+        Reach Out to Join the Team
+      </a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white py-6 text-center text-sm text-gray-500">
+    &copy; 2025 FIEN Foundation. All rights reserved.
+  </footer>
+</body>
+</html>

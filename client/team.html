@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="img/logo.jpg" type="image/jpeg" />
+  <title>Our Team - FIEN Foundation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-[#1A1A1A]">
+  <!-- Responsive Navbar -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <!-- Logo -->
+      <a href="index.html">
+        <img src="img/logo.jpg" alt="FIEN Logo" class="h-8" />
+      </a>
+
+      <!-- Hamburger/X Button -->
+      <button
+        id="menu-toggle"
+        class="md:hidden text-gray-700 focus:outline-none transition-transform duration-200 ease-in-out"
+        onclick="toggleMenu()"
+      >
+        <!-- Hamburger Icon -->
+        <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+
+        <!-- X Icon (hidden by default) -->
+        <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex space-x-4 text-sm font-medium">
+        <a href="index.html" class="hover:text-blue-700">Home</a>
+        <a href="program.html" class="hover:text-blue-700">Our Programs</a>
+        <a href="team.html" class="hover:text-blue-700">Our Team</a>
+        <a href="interns.html" class="hover:text-blue-700">Intern Spotlight</a>
+        <a href="index.html#contact" class="hover:text-blue-700">Contact Us</a>
+        <a href="get-involved.html" class="hover:text-blue-700">Get Involved</a>
+      </nav>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 space-y-2 text-sm font-medium transition-all duration-300 ease-in-out">
+      <a href="index.html" class="block hover:text-blue-700">Home</a>
+      <a href="program.html" class="block hover:text-blue-700">Our Programs</a>
+      <a href="team.html" class="block hover:text-blue-700">Our Team</a>
+      <a href="interns.html" class="block hover:text-blue-700">Intern Spotlight</a>
+      <a href="index.html#contact" class="block hover:text-blue-700">Contact Us</a>
+      <a href="get-involved.html" class="block hover:text-blue-700">Get Involved</a>
+    </div>
+  </header>
+
+  <!-- Toggle Script -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const menuIcon = document.getElementById('menu-icon');
+      const closeIcon = document.getElementById('close-icon');
+
+      menu.classList.toggle('hidden');
+      menuIcon.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
+    }
+  </script>
+
+  <!-- Page Heading -->
+  <section class="bg-[#E9FAF0] py-16 text-center">
+    <div class="max-w-4xl mx-auto px-6">
+      <h1 class="text-4xl font-bold text-[#00A859] mb-4">Our Leadership Team</h1>
+      <p class="text-lg text-gray-700">
+        The FIEN Foundation’s team is built of committed professionals and volunteers from Tanzania and beyond, working together to ensure inclusive, innovative, and impactful education access across East Africa.
+      </p>
+    </div>
+  </section>
+
+  <!-- Team Grid -->
+  <main class="max-w-7xl mx-auto px-6 py-16">
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-10">
+      <!-- Repeatable Team Member Block -->
+      <div class="bg-white rounded-lg shadow-md text-center p-6">
+        <h2 class="text-lg font-bold text-[#00A859]">Magessa George</h2>
+        <p class="text-sm text-gray-600 mt-1">CEO / Founder</p>
+        <img src="img/georgeFIEN.jpeg" alt="Magessa George" class="mt-4 rounded-full w-50 h-50 mx-auto object-cover" />
+      </div>
+      <div class="bg-white rounded-lg shadow-md text-center p-6">
+        <h2 class="text-lg font-bold text-[#00A859]">Maria Charles</h2>
+        <p class="text-sm text-gray-600 mt-1">Director of Teacher Exchanges</p>
+        <img src="img/charlesFIEN.jpeg" alt="Maria Charles" class="mt-4 rounded-full w-50 h-50 mx-auto object-cover" />
+      </div>
+      <div class="bg-white rounded-lg shadow-md text-center p-6">
+        <h2 class="text-lg font-bold text-[#00A859]">Swidefrida Sakia</h2>
+        <p class="text-sm text-gray-600 mt-1">Chief of Finance</p>
+        <img src="img/sakiaFIEN.jpeg" alt="Swidefrida Sakia" class="mt-4 rounded-full w-50 h-50 mx-auto object-cover" />
+      </div>
+      <div class="bg-white rounded-lg shadow-md text-center p-6">
+        <h2 class="text-lg font-bold text-[#00A859]">Lwiza Nsumba</h2>
+        <p class="text-sm text-gray-600 mt-1">Director of Health Insurance</p>
+        <img src="img/nsumbaFIEN.jpeg" alt="Lwiza Nsumba" class="mt-4 rounded-full w-50 h-50 mx-auto object-cover" />
+      </div>
+      <div class="bg-white rounded-lg shadow-md text-center p-6">
+        <h2 class="text-lg font-bold text-[#00A859]">Bertha Mbuya</h2>
+        <p class="text-sm text-gray-600 mt-1">Director of Inclusive Education</p>
+        <img src="img/mbuyaFIEN.jpeg" alt="Bertha Mbuya" class="mt-4 rounded-full w-50 h-50mx-auto object-cover" />
+      </div>
+      <div class="bg-white rounded-lg shadow-md text-center p-6">
+        <h2 class="text-lg font-bold text-[#00A859]">Nestory Salika</h2>
+        <p class="text-sm text-gray-600 mt-1">Director of Digital Teaching</p>
+        <img src="img/salikaFIEN.jpeg" alt="Nestory Salika" class="mt-4 rounded-full w-50 h-50 mx-auto object-cover" />
+      </div>
+      <div class="bg-white rounded-lg shadow-md text-center p-6">
+        <h2 class="text-lg font-bold text-[#00A859]">Abby Ziegelbien</h2>
+        <p class="text-sm text-gray-600 mt-1">Global Intern Director</p>
+        <img src="img/ziegelbienFIEN.jpeg" alt="Abby Ziegelbien" class="mt-4 rounded-full w-50 h-50 mx-auto object-cover" />
+      </div>
+      <div class="bg-white rounded-lg shadow-md text-center p-6">
+        <h2 class="text-lg font-bold text-[#00A859]">Myles Carpenter</h2>
+        <p class="text-sm text-gray-600 mt-1">Global Donation Service Director</p>
+        <img src="img/carpenterFIEN.jpeg" alt="Myles Carpenter" class="mt-4 rounded-full w-50 h-50 mx-auto object-cover" />
+      </div>
+      <div class="bg-white rounded-lg shadow-md text-center p-6">
+        <h2 class="text-lg font-bold text-[#00A859]">Colton Jordan</h2>
+        <p class="text-sm text-gray-600 mt-1">Communication and Grant Director</p>
+        <img src="img/jordanFIEN.jpeg" alt="Colton Jordan" class="mt-4 rounded-full w-50 h-50 mx-auto object-cover" />
+      </div>
+      <div class="bg-white rounded-lg shadow-md text-center p-6">
+        <h2 class="text-lg font-bold text-[#00A859]">Christian Kisiroti</h2>
+        <p class="text-sm text-gray-600 mt-1">Safari Operations Director</p>
+        <img src="img/kisirotiFIEN.jpeg" alt="Christian Kisiroti" class="mt-4 rounded-full w-50 h-50 mx-auto object-cover" />
+      </div>
+      <div class="bg-white rounded-lg shadow-md text-center p-6">
+        <h2 class="text-lg font-bold text-[#00A859]">Lupakisyo Bukuku</h2>
+        <p class="text-sm text-gray-600 mt-1">Director of Mental Health</p>
+        <img src="img/bukukuFIEN.jpeg" alt="Lupakisyo Bukuku" class="mt-4 rounded-full w-50 h-50 mx-auto object-cover" />
+      </div>
+      <div class="bg-white rounded-lg shadow-md text-center p-6">
+        <h2 class="text-lg font-bold text-[#00A859]">Aliah Naqi</h2>
+        <p class="text-sm text-gray-600 mt-1">Education Advisor</p>
+        <img src="img/naqiFIEN.jpeg" alt="Aliah Naqi" class="mt-4 rounded-full w-50 h-50 mx-auto object-cover" />
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white py-6 text-center text-sm text-gray-500">
+    &copy; 2025 FIEN Foundation. All rights reserved.
+  </footer>
+</body>
+</html>
